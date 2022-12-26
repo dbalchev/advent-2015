@@ -13,7 +13,7 @@ impl Solution for Day00 {
 
     fn parse_input(reader: Box<dyn BufRead>) -> AnyResult<Self> {
         let lines = reader.lines().collect::<Result<Vec<_>, _>>()?;
-        Ok(Day00 { lines })
+        Ok(Self { lines })
     }
 
     fn solve_part_1(&self) -> AnyResult<Self::SolutionResult> {
