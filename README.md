@@ -34,6 +34,8 @@ When day_00 is ran the input is parsed and the answers for both parts are shown.
 - if `--real` is passed, the puzzle input for hte corresponding day is downloaded, saved in `.cache/` and passed as input. 
   If a user session isn't found in `.cache` you are prompted to provide it and after that it's saved.
 
+## Running tests
+
 ```bash
 cargo test day_00_tests
 ```
