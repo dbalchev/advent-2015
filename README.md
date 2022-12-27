@@ -34,9 +34,14 @@ When day_00 is ran the input is parsed and the answers for both parts are shown.
 - if `--real` is passed, the puzzle input for hte corresponding day is downloaded, saved in `.cache/` and passed as input. 
   If a user session isn't found in `.cache` you are prompted to provide it and after that it's saved.
 
+```bash
+cargo test day_00_tests
+```
+
+This command runs the tests in the `day_00_tests` module. You can also use `cargo test` to run all tests.
 
 # Day setup
 
 1. Copy `src/bin/day_00.rs` to `src/bin/day_##.rs`.
 2. Update the name of the struct and all mentions in your new file.
-3. Change DAY_NUMBER.
+3. Change `DAY_NUMBER` and possibly `SolutionResult` if the output isn't an integer.

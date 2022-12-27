@@ -9,7 +9,7 @@ struct Day00 {
 
 impl Solution for Day00 {
     const DAY_NUMBER: i32 = 1;
-    type SolutionResult = i32;
+    type SolutionResult = i64;
 
     fn parse_input(reader: Box<dyn BufRead>) -> AnyResult<Self> {
         let lines = reader.lines().collect::<Result<Vec<_>, _>>()?;
@@ -17,11 +17,11 @@ impl Solution for Day00 {
     }
 
     fn solve_part_1(&self) -> AnyResult<Self::SolutionResult> {
-        Ok(self.lines.len() as i32)
+        Ok(self.lines.len() as i64)
     }
 
     fn solve_part_2(&self) -> AnyResult<Self::SolutionResult> {
-        Ok(self.lines.iter().map(|s| s.len()).sum::<usize>() as i32)
+        Ok(self.lines.iter().map(|s| s.len()).sum::<usize>() as i64)
     }
 }
 
@@ -30,7 +30,7 @@ fn main() -> AnyResult<()> {
 }
 
 #[cfg(test)]
-mod day00_tests {
+mod day_00_tests {
     use aoc_template_rs::aoc::solution::Solution;
 
     use super::Day00;
