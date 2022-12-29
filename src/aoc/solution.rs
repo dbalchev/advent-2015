@@ -35,7 +35,7 @@ fn get_input_reader(cli: Cli, day: i32) -> AnyResult<Box<dyn BufRead>> {
 pub trait Solution: Sized {
     const DAY_NUMBER: i32;
     type SolutionResult: Display;
-    fn parse_input(reader: Box<dyn BufRead>) -> AnyResult<Self>;
+    fn parse_input<B: BufRead>(reader: B) -> AnyResult<Self>;
     fn solve_part_1(&self) -> AnyResult<Self::SolutionResult>;
     fn solve_part_2(&self) -> AnyResult<Self::SolutionResult>;
 

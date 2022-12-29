@@ -11,7 +11,7 @@ impl Solution for Day00 {
     const DAY_NUMBER: i32 = 1;
     type SolutionResult = i64;
 
-    fn parse_input(reader: Box<dyn BufRead>) -> AnyResult<Self> {
+    fn parse_input<B: BufRead>(reader: B) -> AnyResult<Self> {
         let lines = reader.lines().collect::<Result<Vec<_>, _>>()?;
         Ok(Self { lines })
     }
