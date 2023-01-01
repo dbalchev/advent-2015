@@ -55,12 +55,12 @@ mod day_00_tests {
         }
     }
     // #[test]
-    fn test_parsing() {
-        assert_eq!(
-            example_data(),
-            Day00::parse_input(Day00::example_data_reader().unwrap()).unwrap()
-        );
-    }
+    // fn test_parsing() {
+    //     assert_eq!(
+    //         example_data(),
+    //         Day00::parse_input(Day00::example_data_reader().unwrap()).unwrap()
+    //     );
+    // }
     #[test]
     fn test_part_1() {
         assert_eq!(14, example_data().solve_part_1().unwrap());
