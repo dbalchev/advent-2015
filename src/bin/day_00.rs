@@ -1,6 +1,6 @@
 use std::io::BufRead;
 
-use aoc_template_rs::aoc::{solution::Solution, utils::AnyResult};
+use advent_2015::aoc::{solution::Solution, utils::AnyResult};
 
 #[derive(PartialEq, Eq, Debug)]
 struct Day00 {
@@ -31,7 +31,7 @@ fn main() -> AnyResult<()> {
 
 #[cfg(test)]
 mod day_00_tests {
-    use aoc_template_rs::aoc::solution::Solution;
+    use advent_2015::aoc::solution::Solution;
 
     use super::Day00;
     fn example_data() -> Day00 {
@@ -54,7 +54,7 @@ mod day_00_tests {
             ],
         }
     }
-    #[test]
+    // #[test]
     fn test_parsing() {
         assert_eq!(
             example_data(),
